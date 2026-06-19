@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package task;
+
+option go_package = "task/pb";
+
+service TaskService {
+  rpc Create (CreateRequest) returns (CreateResponse);
+  rpc List(ListRequest) returns (ListResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Update(UpdateRequest) returns (UpdateResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+message Status {
+    int64 id = 1;
+    string name = 2;
+}
+
+message Task {
+    int64 id = 1;
+    string title = 2;
+    string description = 3;
+    string deadline = 4; // 2023-12-25T10:30:00Z
+    Status status = 5;
+    int64 creatorID = 6;
+}
+
+message CreateRequest{
+    string title = 2;
+    string description = 3;
+    string deadline = 4;
+    int64 statusID = 5;
+    int64 creatorID = 6;
+}
+message CreateResponse {
+    int64 id = 1;
+}
+
+message ListRequest{
+    optional string status = 1;
+    optional bool deadline = 2;
+    optional int64 creator_id = 3;
+}
+message ListResponse {
+    repeated Task tasks = 1;
+}
+
+message GetRequest{
+    oneof selector {
+        int64 id = 1;
+        string title = 2;
+    }
+}
+message GetResponse {
+    Task task = 1;
+}
+
+message UpdateRequest{
+    int64 id = 1;
+    optional string title = 2;
+    optional string description = 3;
+    optional string deadline = 4;
+    optional int64 status_id = 5;
+}
+message UpdateResponse {
+    int64 id = 1;
+}
+
+message DeleteRequest{
+    int64 id = 1;
+}
+message DeleteResponse {
+}
