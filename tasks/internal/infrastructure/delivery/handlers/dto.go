@@ -2,9 +2,10 @@ package handlers
 
 import (
 	"errors"
-	"tasks/internal/domain"
-	"tasks/pb"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
+	"github.com/mc-lovin-132/tasks/pb"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

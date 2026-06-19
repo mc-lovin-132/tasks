@@ -5,8 +5,9 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"tasks/config"
-	"tasks/internal/app"
+
+	"github.com/mc-lovin-132/tasks/config"
+	"github.com/mc-lovin-132/tasks/internal/app"
 
 	_ "github.com/lib/pq"
 	"go.uber.org/zap"

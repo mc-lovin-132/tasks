@@ -3,12 +3,13 @@ package app
 import (
 	"context"
 	"net"
-	"tasks/config"
-	"tasks/internal/infrastructure/delivery/handlers"
-	"tasks/internal/infrastructure/delivery/interceptors"
-	"tasks/internal/infrastructure/repository"
-	"tasks/internal/service"
-	"tasks/pb"
+
+	"github.com/mc-lovin-132/tasks/config"
+	"github.com/mc-lovin-132/tasks/internal/infrastructure/delivery/handlers"
+	"github.com/mc-lovin-132/tasks/internal/infrastructure/delivery/interceptors"
+	"github.com/mc-lovin-132/tasks/internal/infrastructure/repository"
+	"github.com/mc-lovin-132/tasks/internal/service"
+	"github.com/mc-lovin-132/tasks/pb"
 
 	// "github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx"

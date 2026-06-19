@@ -2,9 +2,10 @@ package handlers
 
 import (
 	"context"
-	"tasks/internal/domain"
-	"tasks/pb"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
+	"github.com/mc-lovin-132/tasks/pb"
 )
 
 type service interface {

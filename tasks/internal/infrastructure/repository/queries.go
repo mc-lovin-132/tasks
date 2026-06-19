@@ -1,8 +1,9 @@
 package repository
 
 import (
-	"tasks/internal/domain"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
 
 	sq "github.com/Masterminds/squirrel"
 )

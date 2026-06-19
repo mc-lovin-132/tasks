@@ -4,8 +4,9 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"tasks/internal/domain"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
 
 	"github.com/jmoiron/sqlx"
 )

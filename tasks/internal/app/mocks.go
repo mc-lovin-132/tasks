@@ -2,8 +2,9 @@ package app
 
 import (
 	"context"
-	"tasks/internal/domain"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
 )
 
 type userServiceMock struct{}

@@ -3,8 +3,9 @@ package repository
 import (
 	"database/sql"
 	"fmt"
-	"tasks/internal/domain"
 	"time"
+
+	"github.com/mc-lovin-132/tasks/internal/domain"
 
 	"github.com/lib/pq"
 )
